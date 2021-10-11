@@ -131,26 +131,26 @@
             <div class="tabs__sign-up_wrapper tabs_block" id="tab_01">
               <form action="#" class="modal__sign-up modal_form">
                 <label for="name">Имя</label>
-                <input type="text" name="name" placeholder="Имя">
+                <input type="text" name="name" data-validate-field="name" placeholder="Имя">
                 <label for="email">Email</label>
-                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="email" data-validate-field="email" placeholder="Email">
                 <label for="phone">Телефон</label>
-                <input type="text" name="phone" placeholder="Телефон">
+                <input type="text" name="phone" data-validate-field="phone" placeholder="Телефон">
                 <label for="password">Пароль</label>
-                <input type="password" name="modal__password" placeholder="Пароль">
+                <input type="password" name="password" data-validate-field="password" placeholder="Пароль">
                 <label for="password_repeat">Повторите пароль</label>
-                <input type="text" name="password_repeat" placeholder="Повторите пароль">
-                <label for="personal_data"><input type="checkbox" name="personal_data" class="sign-up__personal-data">Согласие на обработку персональных данных</label>
-                <button type="submit" name="login" class="modal_btn">Зарегистрироваться</button>
+                <input type="password" name="password_repeat" data-validate-field="password_repeat" placeholder="Повторите пароль">
+                <label for="personal_data"><input type="checkbox" name="personal_data" data-validate-field="personal_data" class="sign-up__personal-data">Согласие на обработку персональных данных</label>
+                <button type="submit" name="login" class="sign-up__btn modal_btn">Зарегистрироваться</button>
               </form>
             </div>
             <div class="tabs__log-in_wrapper tabs_block" id="tab_02">
               <form action="#" class="modal__log-in modal_form">
-                <label for="name">Имя</label>
-                <input type="text" name="name" placeholder="Имя">
+                <label for="name">Email</label>
+                <input type="text" name="email" data-validate-field="email" placeholder="Email">
                 <label for="password">Пароль</label>
-                <input type="password" name="password" placeholder="Пароль">
-                <button type="submit" name="log-in" class="modal_btn">Войти</button>
+                <input type="password" name="password" data-validate-field="password" placeholder="Пароль">
+                <button type="submit" name="log-in" class="log-in__btn modal_btn">Войти</button>
               </form>
             </div>
           </div>
@@ -158,6 +158,7 @@
       </div>
     </div>
   </div>
-</body>
+  <script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
+</body>
 </html>
