@@ -26,39 +26,52 @@ document.addEventListener('DOMContentLoaded', function() {
    });
 
    /* работа с формой комментария */
-   let submitComment = document.querySelector('.comment-form__submit');
 
-   submitComment.addEventListener('click', (event) => {
-      event.preventDefault();
-      let commentForm = document.querySelector('.comment__comment-form');
-      let commentAuthor = 'Nikita';
-      let commentText = commentForm.textarea.value;
-      commentForm.textarea.value = '';
-      let mainComment = document.querySelector('.main__comment');
+   new window.JustValidate('.comment__comment-form', {
+      rules: {
+         comment: {
+            required: true,
+            function: (name, value) => {
+               return value.length > 0;
+            }
+         }
+      },
+      messages: {
+         comment: {
+            required: 'Это поле обязательно'
+         }
+      },
+      submitHandler: function (form, values) {
+         let textarea = form.elements.textarea;
+         let commentText = textarea.value;
+         let commentAuthor = 'Nikita';
+         textarea.value = '';
 
-      let comment = document.createElement('div');
-      comment.className = 'comment__item';
-      let datetime = new Date();
-      let dt = Intl.DateTimeFormat('ru', {
-         day: 'numeric',
-         month: 'numeric',
-         year: 'numeric',
-         hour: "numeric",
-         minute: "numeric"
-      }).format(datetime);
-      comment.innerHTML = `
-         <div class="comment__header">
-            <div class="comment_avatar-wrapper">
-               <img src="img/avatar.jpg" alt="" class="comment__avatar">
+         let comment = document.createElement('div');
+         comment.className = 'comment__item';
+         let datetime = new Date();
+         let dt = Intl.DateTimeFormat('ru', {
+            day: 'numeric',
+            month: 'numeric',
+            year: 'numeric',
+            hour: "numeric",
+            minute: "numeric"
+         }).format(datetime);
+         comment.innerHTML = `
+            <div class="comment__header">
+               <div class="comment_avatar-wrapper">
+                  <img src="img/avatar.jpg" alt="" class="comment__avatar">
+               </div>
+               <div class="comment__author">${commentAuthor}</div>
             </div>
-            <div class="comment__author">${commentAuthor}</div>
+            <div class="comment__text">${commentText}</div>
+            <div class="comment__datetime">${dt}</div>
          </div>
-         <div class="comment__text">${commentText}</div>
-         <div class="comment__datetime">${dt}</div>
-      </div>
-      `
-      mainComment.append(comment);
-   })
+         `
+         let mainComment = document.querySelector('.main__comment');
+         mainComment.append(comment);
+      }
+   });
 
    /* валидация регистрации/входа */
 
@@ -94,10 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
             function: (name, value) => {
                let regForm = document.querySelector('.modal__sign-up');
                let password = regForm.elements.password;
-               if (value === password.value) {
-                  return true;
-               }
-               return false;
+               return value === password.value;
             }
          },
          personal_data: {
@@ -139,6 +149,8 @@ document.addEventListener('DOMContentLoaded', function() {
          }
       }
    });
+
+   /* валидация формы входа */
 
    new window.JustValidate('.modal__log-in', {
       rules: {
