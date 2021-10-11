@@ -19,6 +19,7 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+  min-height: 100%;
 }
 
 .container {
@@ -88,6 +89,10 @@ body {
 }
 
 /* main */
+
+.main {
+  flex: 1 0 auto;
+}
 
 .main__row {
   background-color: white;
