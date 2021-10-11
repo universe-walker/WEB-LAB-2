@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
             <img class="logo" src="img/logo.png" alt="Лого">
           </div>
           <div class="nav__name nav_item">
-            <a class="nav_link" href="#">КиноТекст</a>
+            <a class="nav_link" href="index.html">КиноТекст</a>
           </div>
         </div>
         <div class="nav__right">
@@ -38,6 +38,19 @@
             <div class="main__row">
                 <div class="main__article">
                     <div class="article__title">Рецензии наших авторов:</div>
+                        <div class="article__item">
+                            <div class="article__film-title">
+                                <a href="detail.html" class="article__link">Новые времена (1934)</a>
+                            </div>  
+                            <div class="article__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem vitae dicta hic alias consequatur mollitia nam voluptatum, a doloremque dignissimos delectus. Ut et, odio nihil veniam similique qui temporibus omnis! 
+                            Dolor quod, quas labore modi accusantium earum incidunt illum pariatur ratione fuga minus sequi, itaque debitis aliquid officia obcaecati asperiores ullam impedit at quae esse corrupti nostrum. Quas beatae, cum temporibus vitae enim laudantium labore incidunt vero ducimus, deleniti fugit accusantium ad facilis dolorum perspiciatis 
+                            quisquam commodi facere harum alias impedit. Est architecto veritatis alias nihil, quasi aperiam repellat adipisci natus eligendi laborum voluptate. At facere possimus quaerat doloremque accusantium... 
+                            <span class="article__read-more"><a href="detail.html" class="article__link link_underline">Читать далее</a></span></div>
+                            <div class="article__info">
+                                <div class="article__author">Андре Базен</div>
+                                <div class="article__date">28.10.2018</div>
+                            </div>
+                    </div>
                     <div class="article__item">
                         <div class="article__film-title">
                             <a href="#" class="article__link">Ностальгия (1983)</a>
@@ -64,19 +77,6 @@
                             <div class="article__date">23.09.2021</div>
                         </div>
                     </div>
-                    <div class="article__item">
-                        <div class="article__film-title">
-                            <a href="#" class="article__link">Новые времена (1934)</a>
-                        </div>  
-                        <div class="article__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem vitae dicta hic alias consequatur mollitia nam voluptatum, a doloremque dignissimos delectus. Ut et, odio nihil veniam similique qui temporibus omnis! 
-                        Dolor quod, quas labore modi accusantium earum incidunt illum pariatur ratione fuga minus sequi, itaque debitis aliquid officia obcaecati asperiores ullam impedit at quae esse corrupti nostrum. Quas beatae, cum temporibus vitae enim laudantium labore incidunt vero ducimus, deleniti fugit accusantium ad facilis dolorum perspiciatis 
-                        quisquam commodi facere harum alias impedit. Est architecto veritatis alias nihil, quasi aperiam repellat adipisci natus eligendi laborum voluptate. At facere possimus quaerat doloremque accusantium... 
-                        <span class="article__read-more"><a href="#" class="article__link link_underline">Читать далее</a></span></div>
-                        <div class="article__info">
-                            <div class="article__author">Андре Базен</div>
-                            <div class="article__date">20.09.2018</div>
-                        </div>
-                    </div>
             </div>
         </div>
     </main>
@@ -97,6 +97,46 @@
         <div class="footer__copyright">KinoText© 2011-2021</div>
       </div>
     </footer>
+    <div class="modal__wrapper hidden">
+      <div class="modal">
+        <div class="modal__cancel-wrapper">
+          <button type="button" name="button" class="modal__cancel">&#10006;</button>
+        </div>
+        <div class="modal__tabs">
+          <nav class="tabs__items">
+            <a href="#tab_01" class="tabs__item"><span>Регистрация</span></a>
+            <a href="#tab_02" class="tabs__item"><span>Войти</span></a>
+          </nav>
+          <div class="tabs__body">
+            <div class="tabs__sign-up_wrapper tabs_block" id="tab_01">
+              <form action="#" class="modal__sign-up modal_form">
+                <label for="name">Имя</label>
+                <input type="text" name="name" data-validate-field="name" placeholder="Имя">
+                <label for="email">Email</label>
+                <input type="text" name="email" data-validate-field="email" placeholder="Email">
+                <label for="phone">Телефон</label>
+                <input type="text" name="phone" data-validate-field="phone" placeholder="Телефон">
+                <label for="password">Пароль</label>
+                <input type="password" name="password" data-validate-field="password" placeholder="Пароль">
+                <label for="password_repeat">Повторите пароль</label>
+                <input type="password" name="password_repeat" data-validate-field="password_repeat" placeholder="Повторите пароль">
+                <label for="personal_data"><input type="checkbox" name="personal_data" data-validate-field="personal_data" class="sign-up__personal-data">Согласие на обработку персональных данных</label>
+                <button type="submit" name="login" class="sign-up__btn modal_btn">Зарегистрироваться</button>
+              </form>
+            </div>
+            <div class="tabs__log-in_wrapper tabs_block" id="tab_02">
+              <form action="#" class="modal__log-in modal_form">
+                <label for="name">Email</label>
+                <input type="text" name="email" data-validate-field="email" placeholder="Email">
+                <label for="password">Пароль</label>
+                <input type="password" name="password" data-validate-field="password" placeholder="Пароль">
+                <button type="submit" name="log-in" class="log-in__btn modal_btn">Войти</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
