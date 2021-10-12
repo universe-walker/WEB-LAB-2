@@ -37,6 +37,7 @@ body {
   display: flex;
   padding: 0 2vw;
   justify-content: space-between;
+  font-family: 'Playfair Display', sans;
 }
 
 .nav__left {
@@ -45,9 +46,8 @@ body {
 }
 
 .nav__name {
-  font-size: 25px;
+  font-size: 1.6rem;
   line-height: 1;
-  font-family: 'Playfair Display', sans;
 }
 
 .logo {
@@ -55,29 +55,25 @@ body {
   height: 30px;
 }
 
-.search {
-  height: 20px;
-  width: 20px;
-}
-
-.nav__list {
-  height: 100%;
+.nav__right {
   display: flex;
   align-items: center;
-  font-family: sans-serif;
-}
-
-.nav_item {
-  box-sizing: border-box;
-  width: auto;
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 .nav_item:first-child {
     padding: 0 1vw;
 }
 
+.nav_item {
+  height: 100%;
+}
+
 .nav_link {
-  display: block;
+  display: flex;
+  align-items: center;
+  height: 100%;
   text-decoration: none;
   color: #333333;
 }
@@ -289,6 +285,7 @@ body {
 .social__image {
   width: 55px;
   height: 40px;
+  max-width: none;
 }
 
 .footer__copyright {
@@ -413,11 +410,31 @@ body {
     width: 80%;
     min-width: 270px;
   }
+
+  .footer__header {
+    flex-direction: column;
+  }
+
+  .footer_item {
+    flex-basis: auto;
+    padding: 0 20px 30px 20px;
+  }
 }
 
 @media (max-width: 320px) {
   .nav__row {
     flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .nav__left {
+    justify-content: center;
+  }
+
+  .nav__right {
+    margin: 20px 0 0 0;
+    justify-content: center;
+    font-size: 1.1rem;
   }
 
   .film__poster-wrapper {
