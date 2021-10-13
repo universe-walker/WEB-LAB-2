@@ -1,0 +1,54 @@
+.main__new-review {
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display', sans;
+}
+
+.new-review__form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20vh 0;
+    width: 50%;
+}
+
+.new-review_input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.new-review_submit {
+    padding: 5px 20px;
+    margin: 20px auto 0 auto;
+}
+
+.new-review_label {
+    font-size: 1.1rem;
+}
+
+.nav_plus-img {
+    width: 20px;
+}
+
+.nav_item>.nav_plus-img:hover {
+    background-color: inherit;
+}
+
+.nav_item {
+    padding-right: 1vw;
+}
+
+.nav_item:last-child {
+    padding-right: 0;
+}
+
+.nav_link_img {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+@media (max-width: 420px) {
+    .new-review__form {
+        width: 90%;
+    }
+}

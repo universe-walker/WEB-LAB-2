@@ -70,6 +70,11 @@ body {
   height: 100%;
 }
 
+.nav__hello {
+  display: flex;
+  align-items: center;
+}
+
 .nav_link {
   display: flex;
   align-items: center;
