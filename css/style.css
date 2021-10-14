@@ -436,7 +436,7 @@ body {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 420px) {
   .nav__row {
     flex-direction: column;
     padding: 10px 0;
@@ -447,9 +447,18 @@ body {
   }
 
   .nav__right {
+    flex-direction: column;
     margin: 20px 0 0 0;
     justify-content: center;
     font-size: 1.1rem;
+  }
+
+  .nav_item {
+    margin-bottom: 10px;
+  }
+
+  .nav_item:last-child {
+    margin-bottom: 0;
   }
 
   .film__poster-wrapper {
