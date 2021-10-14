@@ -63,3 +63,18 @@
 .link_underline {
     border-bottom: 1px solid #000;
 }
+
+@media (max-width: 320px) {
+    .review__film-title {
+        text-align: center;
+    }
+
+    .review__poster-wrapper {
+        float: none;
+        padding-right: 0;
+    }
+
+    .review__poster {
+        margin: 0 auto;
+    }
+}
