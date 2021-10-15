@@ -459,6 +459,14 @@ label {
     font-size: 1.1rem;
   }
 
+  .film__about {
+    flex-direction: column;
+  }
+
+  .film__right {
+    margin-left: 0;
+  }
+
   .nav_item {
     margin-bottom: 10px;
   }
