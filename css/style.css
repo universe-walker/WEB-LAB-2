@@ -330,6 +330,7 @@ body {
 .modal__cancel-wrapper {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 7px;
 }
 
 .modal__cancel {
@@ -354,7 +355,8 @@ body {
   align-items: center;
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .tabs__item span {
