@@ -343,6 +343,10 @@ body {
   cursor: pointer;
 }
 
+label {
+  text-align: center;
+}
+
 .tabs__items {
   display: flex;
 }
